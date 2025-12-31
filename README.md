@@ -34,6 +34,7 @@ deploader.load_depends {
 ```
 
 you can set `games_path` and `mods_path` to the same folder but be warned this would cause issues if a mod and a game share a name.
+
 <br>
 
 dependency scripts get access to a global variable: `deploader.current_path` which will hold the path of the script's parent directory.
