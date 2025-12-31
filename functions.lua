@@ -137,6 +137,6 @@ function deploader.load_depends(params)
 	local mod_aliases = params.mod_aliases or {}
 	local game_aliases = params.game_aliases or {}
 
-    load_mods(path .. mods_path)
+    load_mods(path .. mods_path, mod_aliases)
     load_game(path .. games_path, game_aliases)
 end
