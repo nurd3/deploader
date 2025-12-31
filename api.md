@@ -1,4 +1,5 @@
 # Directory structure
+
 By default, `depload.load_depends` loads dependency scripts in `/depends/mods` and `/depends/games`.
 
 ```
@@ -28,10 +29,12 @@ You won't get an error from deploader, as deploader treats every mod like they s
 # 'deploader' namespace reference
 
 * `deploader.load_depends([params])`: loads scripts for satisfied optional dependencies.
-    * `params`: a deploader table:
-        * `mods_path`: the directory containing the mod dependency scripts, by default this is set to `/depends/mods`
-        * `games_path`: the directory containing the game dependency scripts, by default this is set to `/depends/games`
-            * you can set `mods_path` and `games_path` to the same directory but this may cause naming conflicts if a game and mod share the same technical name.
+	* `params`: a deploader table:
+		* `mods_path`: the directory containing the mod dependency scripts, by default this is set to `/depends/mods`
+		* `games_path`: the directory containing the game dependency scripts, by default this is set to `/depends/games`
+			* you can set `mods_path` and `games_path` to the same directory but this may cause naming conflicts if a game and mod share the same technical name.
+		* `mod_aliases`: `[original_name] = alias` style table defining mod aliases
+		* `game_aliases`: `[original_name] = alias` style table defining game aliases
     * raises an error when it tries to load a satiated mod dependency without it being included in the `mod.conf`
 
 ## Dependency exclusive
